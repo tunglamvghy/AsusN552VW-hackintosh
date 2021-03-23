@@ -6,6 +6,7 @@ Any donation would help me a lot!
 ## Contact me
 [![Telegram](https://img.shields.io/badge/Chat_on-Telegram-blue.svg)](https://t.me/tunglamvghy)
 
+***Work done and tested in collaboration with @Spatyhacker laptop.***
 # Asus VivoBook Pro N552VW
 # Mac OS X 11 BigSur 
 ***This EFI cannot be used for previous version of macOS.***
