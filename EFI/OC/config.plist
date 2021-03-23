@@ -586,40 +586,49 @@
 	<dict>
 		<key>Add</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,31,3</string>
+				<key>RM,device-id</key>
+				<data>cJ0AAA==</data>
+				<key>device_type</key>
+				<string>Audio device</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>hda-idle-support</key>
+				<integer>1</integer>
+				<key>layout-id</key>
+				<integer>31</integer>
+				<key>model</key>
+				<string>100 Series/C230 Series Chipset Family HD Audio Controller</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>AAPL,GfxYTile</key>
+				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAbGQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
 				<key>device-id</key>
-				<data>EhkAAA==</data>
+				<data>GxkAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
 				<data>AQAAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>enable-lspcon-support</key>
+				<key>force-online</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-has-lspcon</key>
+				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-con0-preferred-lspcon-mode</key>
-				<data>AQAAAA==</data>
+				<key>framebuffer-con2-type</key>
+				<data>AAgAAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-patch0-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-patch0-find</key>
-				<data>ChMDAAAABgAAAAAAAAAAAA==</data>
-				<key>framebuffer-patch0-replace</key>
-				<data>DxMDAAAABgAAAAAAAAAAAA==</data>
-				<key>framebuffer-patch1-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-patch1-find</key>
-				<data>CgsDAAAHBgADAAAABAAAAA==</data>
-				<key>framebuffer-patch1-replace</key>
-				<data>DwsDAAAHBgADAAAABAAAAA==</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
@@ -627,16 +636,10 @@
 				<key>model</key>
 				<string>Intel HD Graphics 530</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
 			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,31,3</string>
-				<key>device_type</key>
-				<string>Audio device</string>
-				<key>layout-id</key>
-				<integer>31</integer>
-				<key>model</key>
-				<string>100 Series/C230 Series Chipset Family HD Audio Controller</string>
+				<key>compatible</key>
+				<string>pci8086,9cc1</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1082,24 +1085,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>USBInjectAll.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/USBInjectAll</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooInput.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -1143,6 +1128,42 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Keyboard</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>FakePCIID.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/FakePCIID</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>FakePCIID_Intel_HDMI_Audio.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1333,9 +1354,9 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PickerMode</key>
-			<string>Builtin</string>
+			<string>External</string>
 			<key>PickerVariant</key>
-			<string>Auto</string>
+			<string>Default</string>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>ShowPicker</key>
@@ -1348,21 +1369,21 @@
 		<key>Debug</key>
 		<dict>
 			<key>AppleDebug</key>
-			<true/>
+			<false/>
 			<key>ApplePanic</key>
-			<true/>
+			<false/>
 			<key>DisableWatchDog</key>
 			<true/>
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
-			<integer>2147483650</integer>
+			<integer>0</integer>
 			<key>SerialInit</key>
 			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Entries</key>
 		<array/>
@@ -1409,7 +1430,7 @@
 				<key>SystemAudioVolume</key>
 				<data>QA==</data>
 				<key>boot-args</key>
-				<string>-v -igfxmpc igfxonln=1 forceRenderStandby=0</string>
+				<string>agdpmod=vit9696</string>
 				<key>csr-active-config</key>
 				<data>/w8AAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1561,6 +1582,7 @@
 		<array>
 			<string>HfsPlus.efi</string>
 			<string>OpenRuntime.efi</string>
+			<string>OpenCanopy.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
